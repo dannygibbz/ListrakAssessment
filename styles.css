@@ -18,6 +18,7 @@
   width: 680px;
   height: 500px;
   max-width: 80%;
+  margin-left: 3rem;
 }
 
 .modal.active {
@@ -62,6 +63,32 @@
 #overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+
+#triColor-container {
+  margin-left: -2rem;
+  padding-right: 2rem;
+}
+
+#triColor-top {
+  background-color: #fd8c94;
+  height: 125px;
+  width: 1px;
+  margin-top: -3.2rem;
+}
+
+#triColor-mid {
+  background-color: lightgray;
+  height: 240px;
+  width: 1px;
+  margin-left: 0rem;
+}
+
+#triColor-bottom {
+  background-color: #fd8c94;
+  height: 135px;
+  width: 1px;
+  margin-top: 0rem;
 }
 
 /* /////// Left side of modal container (Contains text "Get Your Style On") ///////  */
@@ -301,7 +328,7 @@
   .modal {
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 37%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     border: 1px solid black;
@@ -336,6 +363,10 @@
     height: 1rem;
   }
 
+  #triColor-container {
+    display: none;
+    margin-left: 0;
+  }
   #leftContainer {
     font-family: "Prata", serif;
     font-size: 2.8rem;
