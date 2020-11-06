@@ -1,15 +1,21 @@
 const openModalButtons = document.querySelectorAll("[data-modal-target]")
 const closeModalButtons = document.querySelectorAll("[data-close-button]")
-let signupContainer = document.getElementById("signupContainer")
+const signupContainer = document.getElementById("signupContainer")
 const overlay = document.getElementById("overlay")
 const email = document.getElementById("email")
-let inputContainer = document.getElementById("inputContainer")
-let signup = document.getElementById("signupButton")
-let input = document.getElementById("input")
-let message = document.getElementById("message")
-let body = document.getElementsByClassName("body")
-let modal = document.getElementById("modal")
-let secondModal = document.getElementsByClassName("secondModal-header")
+const inputContainer = document.getElementById("inputContainer")
+const signup = document.getElementById("signupButton")
+const input = document.getElementById("input")
+const message = document.getElementById("message")
+const body = document.getElementsByClassName("body")
+const modal = document.getElementById("modal")
+const secondModal = document.getElementsByClassName("secondModal-header")
+const shopButton = document.getElementById("shopButton")
+
+shopButton.addEventListener("click", function(evt) {
+  evt.preventDefault()
+  console.log("we made it!")
+})
 
 openModalButtons.forEach(button => {
   button.addEventListener("click", () => {
@@ -86,7 +92,7 @@ signupButton.addEventListener("click", () => {
           We'll keep you updated on any new deals, news, or gossip that comes
           our way!
         </div>
-        <div id="shopButton">
+        <div id="shopButton" >
           Go Shop!
         </div>
       </div>
