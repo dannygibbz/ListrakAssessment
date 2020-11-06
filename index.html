@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Listrak Form</title>
+    <link rel="shortcut icon" type="img/png" href="listrak.jpeg" />
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <button data-modal-target="#modal">Open Modal</button>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div id="leftContainer">Get Your Style On</div>
+
+        <div id="middleContainer">
+          <div id="upperLine"></div>
+          <div id="ampersand">&</div>
+          <div id="lowerLine"></div>
+        </div>
+
+        <div id="rightContainer">
+          <div id="numberContainer">20</div>
+          <div id="percentageContainer">%</div>
+          <div id="percentOff">OFF</div>
+        </div>
+      </div>
+
+      <div id="signupContainer">
+        <div id="email" >Email Address</div>
+        
+        <div id="inputContainer">
+            <input id="input" type="text" class="no-outline" placeholder="email@gmail">
+        </div>
+    
+        <div id="signupButton">Sign Up</div>
+        </div>
+        <div id="message"></div>
+      </div>
+    </div>
+    <div id="overlay"></div>
+  </body>
+</html>

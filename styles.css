@@ -1,0 +1,513 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* /////// Modal Styling ///////  */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  z-index: 10;
+  background-color: white;
+  width: 680px;
+  height: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  height: 10%;
+  width: 100%;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 10px;
+  margin-left: 90%;
+  color: #e9e9e9;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.modal-body {
+  display: flex;
+  margin-left: 70px;
+  height: 344px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* /////// Left side of modal container (Contains text "Get Your Style On") ///////  */
+
+#leftContainer {
+  font-family: "Prata", serif;
+  font-size: 65px;
+  line-height: 6rem;
+  width: 33%;
+  color: #464646;
+  letter-spacing: 13px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+
+/* /////// Middle Container (Contains upper line, &, lower line) ///////  */
+
+#middleContainer {
+  margin-left: 0.5rem;
+}
+
+#upperLine {
+  left: 664px;
+  width: 0px;
+  height: 98px;
+  border: 1px solid #e9e9e9;
+  margin: 0 auto;
+}
+
+#ampersand {
+  font-family: "Prata", serif;
+  color: #fd8c94;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 5rem;
+  padding-left: 10px;
+}
+
+#lowerLine {
+  width: 0px;
+  height: 98px;
+  border: 1px solid #e9e9e9;
+  margin: 0 auto;
+}
+
+/* /////// Right side of modal Container (Contains 20% Off, ) ///////  */
+
+#rightContainer {
+  margin-top: 16%;
+  display: flex;
+}
+
+#numberContainer {
+  font-family: "Prata", serif;
+  color: #464646;
+  font-size: 10rem;
+}
+
+#percentageContainer {
+  font-family: "Prata", serif;
+  color: #464646;
+  padding-top: 10px;
+  font-size: 5.5rem;
+}
+
+#percentOff {
+  margin-top: 6rem;
+  margin-left: -4.5rem;
+  font-family: "Prata", serif;
+  color: #464646;
+  font-size: 2rem;
+}
+
+/* /////// Email and Sign Up Elements ///////  */
+
+#signupContainer {
+  display: flex;
+  margin-left: 50%;
+}
+
+#email {
+  font-family: "PT Sans", sans-serif;
+  letter-spacing: 0.2rem;
+  border-bottom: 3px solid black;
+  padding: 10px;
+}
+
+#email:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  transition: 0.5s;
+}
+
+#signupButton {
+  font-family: "PT Sans", sans-serif;
+  margin-left: 1rem;
+  color: #fd8c94;
+  letter-spacing: 0.2rem;
+  border-bottom: 3px solid #fd8c94;
+  padding: 10px;
+}
+
+#signupButton:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #fd8c94;
+  transition: 0.5s;
+}
+
+#signupButton:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#inputContainer {
+  display: none;
+  font-family: "PT Sans", sans-serif;
+  letter-spacing: 0.2rem;
+  border-bottom: 3px solid black;
+  padding: 10px;
+}
+
+#input {
+  font-size: 1rem;
+}
+
+.no-outline:focus {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  outline: none;
+}
+
+#message {
+  display: block;
+  height: 50px;
+  color: lightgray;
+  margin-left: 50%;
+  padding-top: 10px;
+  font-family: "PT Sans", sans-serif;
+}
+
+/* /////////////////////////////////////////// */
+.secondModal-header {
+  height: 20%;
+  width: 100%;
+}
+
+.secondModal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 10px;
+  margin-left: 90%;
+  color: #e9e9e9;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+#friendsMessage {
+  font-family: "Prata", serif;
+  font-size: 4.5rem;
+  color: #464646;
+  letter-spacing: 13px;
+  height: 40%;
+  margin-left: 4rem;
+}
+
+#secondaryMessage {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  margin-left: 4rem;
+  height: 4rem;
+}
+
+#shopButton {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-left: 4rem;
+  color: #fd8c94;
+  border-bottom: 3px solid #fd8c94;
+  width: 7rem;
+  padding: 0.5rem;
+}
+
+#shopButton:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #fd8c94;
+  transition: 0.5s;
+}
+
+#shopButton:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#dots {
+  display: flex;
+  height: 2rem;
+  margin-left: 4rem;
+  vertical-align: middle;
+}
+
+.dot {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  background-color: #e9e9e9;
+  margin-right: 0.5rem;
+}
+
+.bigDot {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: #e9e9e9;
+  margin-right: 0.5rem;
+  margin-top: -0.3rem;
+}
+
+.line {
+  height: 3px;
+  width: 125px;
+  background-color: #e9e9e9;
+  font-size: 0.0001px;
+  margin-top: 5px;
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 667px) {
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    z-index: 10;
+    background-color: white;
+    height: 90%;
+    width: 95%;
+    max-width: 95%;
+  }
+
+  .modal-header {
+    height: 5%;
+    width: 100%;
+  }
+
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+    margin-left: 90%;
+    margin-top: -0.5rem;
+    color: #e9e9e9;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+
+  .modal-body {
+    display: block;
+    margin-left: 25px;
+    height: 1rem;
+  }
+
+  #leftContainer {
+    font-family: "Prata", serif;
+    font-size: 2.8rem;
+    width: 90%;
+    max-width: 95%;
+    color: #464646;
+    letter-spacing: 0.5rem;
+    line-height: 3rem;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    margin-left: -1.5rem;
+  }
+
+  .modal-body {
+    margin-left: 70px;
+    height: 344px;
+  }
+
+  #middleContainer {
+    margin-left: 0rem;
+  }
+
+  #upperLine {
+    display: none;
+  }
+
+  #ampersand {
+    font-family: "Prata", serif;
+    color: #fd8c94;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 5rem;
+    padding-left: 0px;
+    margin-left: 5rem;
+  }
+
+  #lowerLine {
+    display: none;
+  }
+
+  #signupContainer {
+    margin-left: 50%;
+  }
+
+  #email {
+    font-family: "PT Sans", sans-serif;
+    letter-spacing: 0.2rem;
+    border-bottom: 3px solid black;
+    padding: 10px;
+  }
+
+  #numberContainer {
+    font-family: "Prata", serif;
+    color: #464646;
+    font-size: 10rem;
+    margin-top: -5rem;
+    margin-left: -1rem;
+  }
+  #percentageContainer {
+    font-family: "Prata", serif;
+    color: #464646;
+    font-size: 5.5rem;
+    margin-top: -5rem;
+  }
+  #percentOff {
+    margin-top: 1rem;
+    font-family: "Prata", serif;
+    color: #464646;
+    font-size: 2rem;
+  }
+
+  #signupContainer {
+    display: block;
+    margin-left: 5%;
+  }
+
+  #email {
+    font-family: "PT Sans", sans-serif;
+    width: 90%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    letter-spacing: 0.2rem;
+    border-bottom: 3px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #signupButton {
+    font-family: "PT Sans", sans-serif;
+    width: 90%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    letter-spacing: 0.2rem;
+    color: #fd8c94;
+    text-align: center;
+    border: 1px solid #fd8c94;
+    padding: 1rem;
+  }
+
+  #message {
+    display: block;
+    height: 50px;
+    color: lightgray;
+    margin-left: 10%;
+    padding-top: 0.3rem;
+    font-family: "PT Sans", sans-serif;
+  }
+  #inputContainer {
+    display: none;
+    width: 90%;
+    margin-left: 1rem;
+    font-family: "PT Sans", sans-serif;
+    letter-spacing: 0.2rem;
+    border-bottom: 3px solid black;
+    padding: 10px;
+  }
+
+  #input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .secondModal-header {
+    height: 5%;
+    width: 100%;
+  }
+
+  #friendsMessage {
+    font-family: "Prata", serif;
+    font-size: 3.5rem;
+    color: #464646;
+    letter-spacing: 13px;
+    margin-left: 2rem;
+  }
+  #dots {
+    display: flex;
+    height: 2rem;
+    margin-left: 2rem;
+    vertical-align: middle;
+    margin-bottom: 1rem;
+  }
+  #secondaryMessage {
+    font-family: "PT Sans", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.7px;
+    margin-left: 2rem;
+    height: 4rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+  #shopButton {
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-left: 2rem;
+    color: #fd8c94;
+    border: 1px solid #fd8c94;
+    width: 80%;
+    text-align: center;
+    padding: 1rem;
+  }
+  .secondModal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+    margin-left: 85%;
+    margin-top: -0.5rem;
+    color: #e9e9e9;
+    font-size: 3rem;
+    font-weight: 100;
+  }
+}
