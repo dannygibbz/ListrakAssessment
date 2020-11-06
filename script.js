@@ -12,11 +12,6 @@ const modal = document.getElementById("modal")
 const secondModal = document.getElementsByClassName("secondModal-header")
 const shopButton = document.getElementById("shopButton")
 
-shopButton.addEventListener("click", function(evt) {
-  evt.preventDefault()
-  console.log("we made it!")
-})
-
 openModalButtons.forEach(button => {
   button.addEventListener("click", () => {
     const modal = document.querySelector(button.dataset.modalTarget)
